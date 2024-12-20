@@ -1,6 +1,7 @@
 import os
 from random import shuffle
 from sets import sets
+from fractions import Fraction
 
 
 def main():
@@ -16,7 +17,7 @@ def main():
                 clear_screen()
 
                 # Print the heading
-                print(f"Level {set["level"]} - {set["name"]}")
+                print(f"Grade {set['grade']}")
 
                 # Print the note, if there is one
                 try:
@@ -28,7 +29,7 @@ def main():
                 print("")
 
                 # Ask the question
-                print(f"Question: {question["question"]}")
+                print(f"Question: {question['question']}")
                 answer = input("Answer: ")
 
                 # Verify the answer
@@ -50,6 +51,7 @@ def main():
 
     except KeyboardInterrupt:
         clear_screen()
+        print(Fraction(3,4))
 
 
 def clear_screen():
