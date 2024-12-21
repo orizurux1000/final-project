@@ -1,57 +1,55 @@
 import os
 from random import shuffle
 from sets import sets
-from fractions import Fraction
 
 
 def main():
     try:
-        flag = 0
+        # Repeat until the user inputs a valid grade
+        grade = 0
+        while grade < 1 or grade > len(sets):
+            clear_screen()
 
-        # Iterate through the sets of problems
-        for set in sets:
-            shuffle(set["questions"])
+            # Print the options
+            for set in sets:
+                print(f"[{set['grade']}] Grade {set['grade']}")
+            
+            # Get the grade from the user
+            try:
+                grade = int(input("\nSelect a grade: "))
+            except ValueError:
+                pass
+        
+        # Get question subsets
+        questions = sets[grade - 1]["questions"]
+        qsets = []
+        if grade == 3:
+            qsets = [questions[0:143], questions[144:287]]
+        else:
+            for i in range(int(len(questions)/50)):
+                qsets.append(questions[i*50:(i+1)*50-1])
+        
+        # Get question set
+        num = 0
+        while num < 1 or num > len(qsets):
+            clear_screen()
 
-            # Iterate through the questions in each set
-            for question in set["questions"]:
-                clear_screen()
+            # Print the options
+            for i in range(len(qsets)):
+                print(f"[{i + 1}] Question set {i + 1}")
 
-                # Print the heading
-                print(f"Grade {set['grade']}")
-
-                # Print the note, if there is one
-                try:
-                    print(set["note"])
-                except KeyError:
-                    pass
-
-                # Add a new line
-                print("")
-
-                # Ask the question
-                print(f"Question: {question['question']}")
-                answer = input("Answer: ")
-
-                # Verify the answer
-                if answer != question["answer"]:
-                    # Update a flag so that the outer loop breaks
-                    flag = 1
-                    break
-
-            # Break if the user inputed the incorrect answer
-            if flag == 1:
-                break
-
-        # You
-        clear_screen()
-        if flag == 0:
-            print("Good job. You won.")
-        elif flag == 1:
-            print("Wrong answer. Good bye.\n")
+            # Get the number from the user
+            try:
+                num = int(input("\nSelect a question set: "))
+            except ValueError:
+                pass
+        
+        
+            
 
     except KeyboardInterrupt:
         clear_screen()
-        print(Fraction(3,4))
+        pass
 
 
 def clear_screen():
