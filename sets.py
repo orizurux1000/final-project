@@ -107,6 +107,7 @@ sets = [
     {
         "grade": 2,
         "questions": [
+            {"question": "333 + 241", "answer": "574"},
             {"question": "567 + 271", "answer": "838"},
             {"question": "153 + 601", "answer": "754"},
             {"question": "547 + 173", "answer": "720"},
