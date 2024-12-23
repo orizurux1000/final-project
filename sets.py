@@ -1,6 +1,7 @@
 sets = [
     {
         "grade": 1,
+        "topics": ["Addition within 100", "Subtraction within 100"],
         "questions": [
             {"question": "24 + 1", "answer": "25"},
             {"question": "76 + 9", "answer": "85"},
@@ -106,6 +107,7 @@ sets = [
     },
     {
         "grade": 2,
+        "topics": ["Addition within 1000", "Subtraction within 1000"],
         "questions": [
             {"question": "333 + 241", "answer": "574"},
             {"question": "567 + 271", "answer": "838"},
@@ -211,6 +213,7 @@ sets = [
     },
     {
         "grade": 3,
+        "topics": ["Single digit multiplication", "Single digit division"],
         "questions": [
             {"question": "1 * 1", "answer": "1"},
             {"question": "1 * 2", "answer": "2"},
@@ -504,6 +507,7 @@ sets = [
     },
     {
         "grade": 4,
+        "topics": ["Adding fractions", "Subtracting fractions", "Adding decimals", "Subtracting decimals"],
         "questions": [
             {"question": "²/₃ + ⁴/₉", "answer": "10/9"},
             {"question": "²/₉ + ¹/₃", "answer": "5/9"},
@@ -710,6 +714,16 @@ sets = [
     },
     {
         "grade": 5,
+        "topics": [
+            "Adding hard fractions",
+            "Subtracting hard fractions",
+            "Multiplying fractions",
+            "Dividing fractions",
+            "Adding hard decimals",
+            "Subtracting hard decimals",
+            "Multiplying decimals",
+            "Dividing decimals",
+        ],
         "questions": [
             {"question": "⁴/₃ + ⁵/₃", "answer": "3"},
             {"question": "¹/₄ + ⁴/₇", "answer": "23/28"},

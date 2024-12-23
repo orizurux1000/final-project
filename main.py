@@ -37,7 +37,8 @@ def main():
 
                 # Print the options
                 for i in range(len(qsets)):
-                    print(f"[{i + 1}] Question set {i + 1}")
+                    topic = sets[grade - 1]["topics"][i]
+                    print(f"[{i + 1}] {topic}")
 
                 # Get the number from the user
                 try:
@@ -64,7 +65,7 @@ def main():
                     print("Correct!")
                 else:
                     score -= 1
-                    print("Incorrect!")
+                    print(f"Incorrect. The correct answer was {question['answer']}.")
                 input("Click enter to continue. ")
 
 
