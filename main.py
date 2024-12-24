@@ -75,7 +75,6 @@ def main():
 
     except KeyboardInterrupt:
         clear_screen()
-        pass
 
 
 def clear_screen():
