@@ -1,5 +1,5 @@
 # Elementary Mathematics
-#### Video Demo: 
+#### Video Demo: https://youtu.be/iFV7oaHlZHc
 #### Description:
 Run main.py to start the project. Exiting with a keyboard interrupt (ctrl+c) clears the terminal screen and kills the program.
 
